@@ -1,4 +1,5 @@
 import asyncio
+from datetime import date, timedelta
 from io import BytesIO
 
 from openpyxl import load_workbook
@@ -100,7 +101,8 @@ def test_strong_runtime_series_a_recent_funding_is_not_capped() -> None:
 
 
 def test_runtime_zero_caps_strong_firmographics_to_pass() -> None:
-    result = run(service([person(description="Enterprise payments platform", stage="Series B", employees=120)]).run())
+    recent_funding = (date.today() - timedelta(days=30)).isoformat()
+    result = run(service([person(description="Enterprise payments platform", stage="Series B", employees=120, funded=recent_funding)]).run())
     lead = result.leads[0]
     assert lead.total >= 3
     assert lead.dimensions["runtime_fit"].score == 0

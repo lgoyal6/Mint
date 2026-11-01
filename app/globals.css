@@ -1,0 +1,117 @@
+@import "@fontsource/hanken-grotesk/400.css";
+@import "@fontsource/hanken-grotesk/500.css";
+@import "@fontsource/hanken-grotesk/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 210 20% 98%;
+  --foreground: 220 18% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 18% 12%;
+  --primary: 221 53% 28%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 170 39% 91%;
+  --secondary-foreground: 178 38% 18%;
+  --muted: 220 16% 94%;
+  --muted-foreground: 220 9% 42%;
+  --destructive: 0 72% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 86%;
+  --input: 220 13% 86%;
+  --ring: 221 53% 28%;
+  background: #FAFAF9;
+  color: #1C1917;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(231, 229, 228, 0.45) 1px, transparent 1px),
+    #FAFAF9;
+  background-size: 64px 64px;
+  color: #1C1917;
+  font-family: "Hanken Grotesk", "Avenir Next", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: #DCEDEA;
+  color: #1C1917;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@layer utilities {
+  .scrollbar-subtle {
+    scrollbar-color: #D6D3D1 transparent;
+    scrollbar-width: thin;
+  }
+
+  .animate-soft-in {
+    animation: soft-in 180ms ease-out both;
+  }
+
+  .agent-loader {
+    position: relative;
+    display: inline-flex;
+    height: 18px;
+    width: 18px;
+    border-radius: 9999px;
+    background: conic-gradient(from 0deg, hsl(var(--primary)) 0 115deg, hsl(var(--muted)) 115deg 360deg);
+    animation: agent-loader-spin 900ms linear infinite !important;
+  }
+
+  .agent-loader::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border-radius: 9999px;
+    background: hsl(var(--card));
+  }
+}
+
+@keyframes soft-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes agent-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

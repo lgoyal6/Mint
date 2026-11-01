@@ -1,0 +1,50 @@
+# Direct GPU infrastructure / inference compute competitors.
+gmi cloud
+gmicloud.ai
+gmi-cloud.com
+fal
+fal.ai
+replicate
+modal labs
+modal-labs
+anyscale
+runpod
+lambda labs
+lambdalabs
+coreweave
+vast.ai
+paperspace
+crusoe
+lepton
+lepton.ai
+fireworks
+fireworks.ai
+octoai
+octo ai
+baseten
+deepinfra
+cerebrium
+mystic.ai
+akash
+io.net
+hyperbolic
+hyperbolic.xyz
+sambanova
+groq
+cerebras
+tensorwave
+hyperstack
+nebius
+voltage park
+foundry
+tinfoil
+covalent
+salad
+salad.com
+novita
+novita.ai
+wallaroo
+together.ai
+together compute
+together-compute
+together ai

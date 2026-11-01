@@ -1,0 +1,26 @@
+[
+  {
+    "email": "alex@example.com",
+    "name": "Alex Rivera",
+    "approval_status": "going",
+    "checked_in_at": "2026-05-28T01:15:00Z",
+    "registration_answers": [
+      {"question": "What company do you work for?", "answer": "Quadex AI"},
+      {"question": "What are you building?", "answer": "Autonomous coding agent"},
+      {"question": "GPU count?", "answer": "8"}
+    ]
+  },
+  {
+    "email": "pending@example.com",
+    "name": "Pending User",
+    "approval_status": "pending",
+    "registration_answers": [
+      {"question": "What company do you work for?", "answer": "Pending Co"}
+    ]
+  },
+  {
+    "email": "declined@example.com",
+    "name": "Declined User",
+    "approval_status": "declined"
+  }
+]

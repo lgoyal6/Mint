@@ -1,0 +1,225 @@
+product: GMI Cloud compute products
+
+offerings:
+  maas:
+    name: MaaS
+    description: API inference for AI-native companies serving AI features through model APIs.
+    signals:
+      - production AI features
+      - model API usage
+      - API cost growth
+      - multiple model vendors
+  dedicated:
+    name: Dedicated Endpoints
+    description: Reserved or private inference capacity for production AI at volume.
+    signals:
+      - high request volume
+      - latency or rate-limit pain
+      - SLA or concurrency requirements
+      - VPC or private deployment needs
+  gpu:
+    name: GPU Clusters
+    description: Bare-metal GPU clusters for training, fine-tuning, and research workloads.
+    signals:
+      - model training or fine-tuning
+      - multi-GPU or multi-node workloads
+      - bare-metal or InfiniBand requirements
+      - hyperscaler training-cost complaints
+
+target_verticals:
+  - research_labs
+  - coding_platforms
+  - agentic
+  - data_labeling
+  - robotics
+  - video_ai_multimodal
+
+adjacent_verticals:
+  - autonomous_vehicles
+  - cv_vision_platforms
+
+tiers:
+  P0:
+    description: Target vertical + estimated spend >= $20k/mo + Seed or above / clear revenue signal.
+    requires:
+      - fits at least one offering
+      - target vertical
+      - estimated spend >= $20k/mo
+      - Seed or above / clear revenue signal
+  P1:
+    description: Target vertical + estimated spend $10k-$20k/mo OR adjacent vertical + estimated spend >= $20k/mo.
+    examples:
+      - target vertical with estimated spend $10k-$20k/mo
+      - adjacent vertical with estimated spend >= $20k/mo
+  P2:
+    description: Potential lead.
+    examples:
+      - target vertical with estimated spend $1k-$10k/mo
+      - adjacent vertical with estimated spend >= $10k/mo
+  NR:
+    description: Nurture relationship for now.
+    triggers:
+      - pre-revenue with no clear infra budget
+      - estimated spend < $1k/mo
+      - no clear product fit
+      - not target or adjacent
+      - non-buyer role
+  NP:
+    description: Legacy not-a-prospect tier retained for older records.
+    triggers:
+      - no_product_fit
+      - non_buyer_role
+      - not_target
+      - pre_product
+      - hard_gate
+      - does_not_meet
+
+gates:
+  hard:
+    - direct_competitor
+    - bigtech_or_large_corp
+    - student_or_academic_role
+    - academic_institution
+    - npo_ngo
+    - government_public_sector
+  soft:
+    - healthcare_biotech_pharma
+    - vc_fund_capital_allocator
+    - consulting_services_agency
+    - marketplace_aggregator
+
+review:
+  statuses:
+    - CLASSIFIED
+    - NEEDS_REVIEW
+  needs_review_when:
+    - confidence <= 2
+    - soft gate fired
+    - affiliation is unverified or contradicted
+
+# AgentBox v5 sourcing. Apollo can find candidate companies; runtime segment and
+# commercial commitments are reviewed at the workload level before outreach.
+agentbox_campaign:
+  default_campaign: product_runtime_us
+  campaigns:
+    product_runtime_us:
+      label: Tier 1/2 product runtime — US
+      candidate_segment: tier_1_or_2
+      person_titles:
+        - CEO
+        - CTO
+        - Chief Technology Officer
+        - Chief AI Officer
+        - Founder
+        - Co-Founder
+        - VP Engineering
+        - VP Platform
+        - VP Infrastructure
+        - Head of Engineering
+        - Head of Platform
+        - Head of Infrastructure
+        - Director of Engineering
+        - Director of Platform
+        - Founding Engineer
+      person_seniorities: [owner, founder, c_suite, vp, head, director]
+      # Apollo requires each employee band as one comma-separated string.
+      org_headcount_ranges: ["1,10", "11,20", "21,50", "51,100", "101,200"]
+      person_locations: [United States]
+      org_keywords: [ai agent, agentic, coding agent, code execution, sandbox, browser automation]
+      per_page: 100
+      pages_per_keyword: 1
+      max_results: 600
+    product_runtime_apac:
+      label: Tier 1/2 product runtime — APAC candidate list
+      candidate_segment: tier_1_or_2
+      person_titles: [CEO, CTO, Chief Technology Officer, Founder, Co-Founder, VP Engineering, VP Platform, Head of Engineering, Head of Platform, Head of Infrastructure, Director of Engineering, Director of Platform, Founding Engineer]
+      person_seniorities: [owner, founder, c_suite, vp, head, director]
+      org_headcount_ranges: ["1,10", "11,20", "21,50", "51,100", "101,200"]
+      person_locations: [Singapore, India, Japan, South Korea, Australia]
+      org_keywords: [ai agent, agentic, coding agent, code execution, sandbox, browser automation]
+      per_page: 100
+      pages_per_keyword: 1
+      max_results: 600
+    tier_3_strategic:
+      label: Tier 3 strategic enterprise — selective
+      candidate_segment: tier_3
+      person_titles: [CTO, VP Engineering, VP of Engineering, Head of Engineering, Head of Platform, VP Platform]
+      org_headcount_ranges: ["1001,2000", "2001,5000", "5001,10000", "10001,1000000"]
+      person_locations: [United States, Singapore, India, Japan, South Korea, Australia]
+      org_keywords: [ai agent, agentic, coding agent, code execution, sandbox, internal ai platform]
+      per_page: 50
+      max_pages: 1
+  runtime_terms:
+    strong:
+      - sandbox
+      - code execution
+      - code interpreter
+      - isolated execution
+      - container sandbox
+      - stateful
+      - persistent session
+      - persistent workspace
+      - per-user workspace
+      - long-lived session
+      - firecracker
+      - microvm
+      - e2b
+      - execute untrusted code
+      - workspace per user
+    medium:
+      - ai agent
+      - agentic
+      - coding agent
+      - browser agent
+      - browser automation
+      - computer use
+      - rpa
+      - tool use
+    inference:
+      - inference
+      - gpu
+      - fine-tune
+      - self-host
+      - open-weight
+      - llama
+      - deepseek
+      - qwen
+      - vllm
+      - maas
+    ephemeral:
+      - sub-second
+      - ephemeral
+      - stateless function
+      - instant cold start
+      - serverless function
+  exclusion_terms:
+    - pure api wrapper
+    - api wrapper
+    - bring your own key
+    - byok
+    - hobby project
+    - pre-product
+  competitor_terms:
+    - e2b
+    - modal
+    - daytona
+    - browserbase
+    - browserless
+    - replit
+    - together ai
+    - runpod
+    - replicate
+  hard_exclusion_terms:
+    - beer
+    - brewery
+    - brewing
+    - alcohol
+    - beverage
+    - restaurant
+    - hospitality
+    - food and drink
+    - apparel
+    - real estate
+    - insurance
+    - pure api wrapper
+    - api wrapper

@@ -1,0 +1,78 @@
+# Big tech, hyperscalers, and large corporations likely to have existing infra.
+google
+alphabet
+deepmind
+meta
+facebook
+microsoft
+amazon
+aws
+apple
+nvidia
+intel
+ibm
+qualcomm
+adobe
+samsung
+sony
+huawei
+bytedance
+tencent
+alibaba
+baidu
+xiaomi
+oppo
+tiktok
+netflix
+uber
+lyft
+tesla
+waymo
+zoox
+cruise
+motional
+sap
+oracle
+salesforce
+snap
+pinterest
+linkedin
+bosch
+siemens
+continental
+nio
+xpeng
+didi
+nec
+fujitsu
+hitachi
+panasonic
+lg
+kakao
+naver
+general motors
+gm
+toyota
+honda
+volkswagen
+li auto
+mobileye
+ge aerospace
+general electric
+zillow
+john deere
+deere
+dolby
+lockheed
+ant group
+honeywell
+tsmc
+intuitive surgical
+hinge health
+ccc intelligent
+lightspeed studios
+canva
+shanghai artificial intelligence laboratory
+shanghai ai laboratory
+ieee computer society
+shanda

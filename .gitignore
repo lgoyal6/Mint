@@ -1,0 +1,45 @@
+.DS_Store
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+.vercel/
+out/
+dist/
+*.tsbuildinfo
+
+# Local outputs and generated exports
+outputs/
+*.xlsx
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel
+
+# Operational data must stay outside the source repository
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.sql.gz
+*.parquet
+scripts/firms.csv
+scripts/build_bits_atoms_mql_workbook.py

@@ -1,0 +1,22 @@
+stealth
+stealth startup
+n/a
+na
+none
+null
+unknown
+undisclosed
+confidential
+freelance
+self-employed
+self employed
+independent
+student
+unemployed
+founder
+ceo
+cto
+engineer
+software engineer
+consultant
+advisor

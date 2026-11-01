@@ -1,0 +1,74 @@
+[
+  {
+    "email": "fixture-1@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 1",
+    "company_name": "Cursor",
+    "title": "CEO",
+    "what_they_are_building": "AI coding platform"
+  },
+  {
+    "email": "fixture-2@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 2",
+    "company_name": "Perplexity",
+    "title": "CEO",
+    "what_they_are_building": "AI answer engine"
+  },
+  {
+    "email": "fixture-3@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 3",
+    "company_name": "Scale AI",
+    "title": "CEO",
+    "what_they_are_building": "Data labeling and AI infrastructure"
+  },
+  {
+    "email": "fixture-4@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 4",
+    "company_name": "Physical Intelligence",
+    "title": "Co-founder",
+    "what_they_are_building": "Robotics foundation models"
+  },
+  {
+    "email": "fixture-5@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 5",
+    "company_name": "Anthropic",
+    "title": "CEO",
+    "what_they_are_building": "AI research lab"
+  },
+  {
+    "email": "fixture-6@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 6",
+    "company_name": "Quadex AI",
+    "title": "Founder",
+    "what_they_are_building": "Autonomous coding agent"
+  },
+  {
+    "email": "fixture-7@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 7",
+    "company_name": "Nova Robotics",
+    "title": "ML Engineer",
+    "what_they_are_building": "Warehouse robotics"
+  },
+  {
+    "email": "fixture-8@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 8",
+    "company_name": "stealth",
+    "title": "Founder",
+    "what_they_are_building": "Undisclosed AI product"
+  },
+  {
+    "email": "fixture-9@example.com",
+    "first_name": "Fixture",
+    "last_name": "Person 9",
+    "company_name": "N/A",
+    "title": null,
+    "what_they_are_building": "Exploring GPU infrastructure"
+  }
+]
